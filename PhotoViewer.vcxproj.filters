@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PVMainWindow.hpp" />
+    <ClInclude Include="PVControlGroup.h" />
+    <ClInclude Include="UI\Control\basic\VBasicControl\vabstractbutton.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vapplication.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vbase.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vbasicanimation.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vblurlabel.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vbrush.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vcanvas.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vcolor.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vfont.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vimage.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vimagelabel.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vmemory.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vmessage.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpainter.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpainterdevice.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpen.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vpushbutton.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vrenderbasic.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vsignal.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vtextlabel.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vtheme.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vthreadprotectble.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vtimer.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vuiobject.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vwidget.hpp">
+      <Filter>UIKits</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UIKits">
+      <UniqueIdentifier>{d5591b24-0d97-4bf1-befa-b7f88fb3b27e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
