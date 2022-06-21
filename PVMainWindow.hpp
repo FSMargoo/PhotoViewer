@@ -98,6 +98,18 @@ private:
 	time_t         LastZoomTime  = 0;
 
 private:
+	void InitPath() {
+		wchar_t LocalPath[MAX_PATH + 1] = { 0 };
+		GetModuleFileName(NULL, LocalPath, MAX_PATH);
+
+		std::wstring PathString = LocalPath;
+
+		PathString = PathString.substr(0, PathString.find_last_of(L"\\"));
+
+		_wchdir(PathString.c_str());
+	}
+
+private:
 	VImage* ZoomImage(VImage* ResourceImage, int Width, int Height) {
 		VImage* Image = new VImage(Width, Height);
 		VPainterDevice Device(Image);
@@ -463,6 +475,7 @@ public:
 		SetMinimalWidth(400);
 		SetMinimalHeight(250);
 
+		InitPath();
 		InitMainUI();
 		InitStartupUI();
 	}
@@ -470,6 +483,7 @@ public:
 		SetMinimalWidth(400);
 		SetMinimalHeight(250);
 
+		InitPath();
 		InitMainUI();
 		InitStartupUI();
 
