@@ -7,9 +7,17 @@
 #include "UI/Control/basic/VBasicControl/vapplication.hpp"
 #include "PVMainWindow.hpp"
 
-int main() {
-	VApplication Applicaiton;
-	PVMainWindow MainWindow(1113, 680, &Applicaiton);
+int main(int argc, char* argv[]) {
+	if (argc == 1) {
+		VApplication Applicaiton;
+		PVMainWindow MainWindow(1113, 680, &Applicaiton);
 
-	return Applicaiton.Exec();
+		return Applicaiton.Exec();
+	}
+	else {
+		VApplication Applicaiton;
+		PVMainWindow MainWindow(1113, 680, CodeConvert(argv[1]), &Applicaiton);
+
+		return Applicaiton.Exec();
+	}
 }

@@ -8,7 +8,20 @@
 
 #include "PVControlGroup.h"
 
+#include <comutil.h>
 #include <direct.h>
+
+#ifdef _DEBUG
+#	pragma comment(lib, "comsuppwd.lib")
+#else
+#	pragma comment(lib, "comsuppw.lib")
+#endif
+
+std::wstring CodeConvert(char* String) {
+	_bstr_t Temp(String);
+
+	return Temp.operator const wchar_t*();
+}
 
 class PVImageLabel : public VImageLabel {
 public:
@@ -452,5 +465,29 @@ public:
 
 		InitMainUI();
 		InitStartupUI();
+	}
+	PVMainWindow(int Width, int Height, std::wstring FilePath, VApplication* Parent) : VMainWindow(Width, Height, Parent) {
+		SetMinimalWidth(400);
+		SetMinimalHeight(250);
+
+		InitMainUI();
+		InitStartupUI();
+
+		int          LastNotDotPosition = static_cast<int>(FilePath.find_last_of(L"\\")) + 1;
+		ViewImageName                   = FilePath.substr(LastNotDotPosition, FilePath.size() - LastNotDotPosition);
+		std::wstring NewWindowTitle     = L"PhotoViewer (" + ViewImageName + L")";
+
+		ViewImagePath = FilePath;
+
+		LocalSurface = LocalUISurafce::MainUI;
+
+		SetWindowText(GetWinID(), NewWindowTitle.c_str());
+
+		SetNewPicture();
+
+		MarginAutoBuild(GetWidth(), GetHeight());
+
+		StartupUI.Hide();
+		MainUI.Show();
 	}
 };
