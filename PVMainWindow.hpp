@@ -98,6 +98,32 @@ private:
 	time_t         LastZoomTime  = 0;
 
 private:
+	std::wstring GetASPercent() {
+		if (ZoomCoefficient >= 1) {
+			return std::to_wstring(ZoomCoefficient * 100).substr(0, 3) + L"%";
+		}
+		if (0.1 <= ZoomCoefficient && 
+			ZoomCoefficient <= 1) {
+			return std::to_wstring(ZoomCoefficient * 100).substr(0, 2) + L"%";
+		}
+		if (ZoomCoefficient <= 0.1) {
+			return std::to_wstring(ZoomCoefficient * 100).substr(0, 1) + L"%";
+		}
+	}
+	std::wstring GetASPercent(double Cofficient) {
+		if (Cofficient >= 1) {
+			return std::to_wstring(Cofficient * 100).substr(0, 3) + L"%";
+		}
+		if (0.1 <= Cofficient &&
+			Cofficient <= 1) {
+			return std::to_wstring(Cofficient * 100).substr(0, 2) + L"%";
+		}
+		if (Cofficient <= 0.1) {
+			return std::to_wstring(Cofficient * 100).substr(0, 1) + L"%";
+		}
+	}
+
+private:
 	void InitPath() {
 		wchar_t LocalPath[MAX_PATH + 1] = { 0 };
 		GetModuleFileName(NULL, LocalPath, MAX_PATH);
@@ -157,7 +183,7 @@ private:
 
 				ZoomCoefficient = 1;
 
-				ZoomPercent->SetPlaneText(L"100%");
+				ZoomPercent->SetPlaneText(GetASPercent());
 			}
 			else {
 				ZoomCoefficient = static_cast<double>(GetHeight() - 74) / ViewImage->GetHeight();
@@ -169,7 +195,7 @@ private:
 				ViewPicture->Move(GetWidth() / 2 - ZoomedImage->GetWidth() / 2, 
 					GetHeight() / 2 - ZoomedImage->GetHeight() / 2);
 
-				ZoomPercent->SetPlaneText(std::to_wstring(ZoomCoefficient * 100).substr(0, 2) + L"%");
+				ZoomPercent->SetPlaneText(GetASPercent());
 			}
 		}
 		else {
@@ -253,10 +279,10 @@ private:
 
 		if (Coefficient >= 0.1 && Coefficient <= 8) {
 			if (Coefficient >= 1) {
-				ZoomPercent->SetPlaneText(std::to_wstring(Coefficient * 100).substr(0, 3) + L"%");
+				ZoomPercent->SetPlaneText(GetASPercent(Coefficient));
 			}
 			else {
-				ZoomPercent->SetPlaneText(std::to_wstring(Coefficient * 100).substr(0, 2) + L"%");
+				ZoomPercent->SetPlaneText(GetASPercent(Coefficient));
 			}
 
 			if (ZoomedImage != nullptr) {

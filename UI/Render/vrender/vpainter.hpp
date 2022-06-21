@@ -44,7 +44,7 @@ public:
 		/* Set the Render Quality as High Quality */
 		NativeGraphics->SetSmoothingMode    (VGdiplus::SmoothingMode     ::SmoothingModeHighQuality);
 		NativeGraphics->SetTextRenderingHint(VGdiplus::TextRenderingHint ::TextRenderingHintAntiAliasGridFit);
-		NativeGraphics->SetInterpolationMode(VGdiplus::InterpolationMode ::InterpolationModeHighQualityBilinear);
+		NativeGraphics->SetInterpolationMode(VGdiplus::InterpolationMode ::InterpolationModeDefault);
 	}
 
 	/*
