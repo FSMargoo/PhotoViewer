@@ -31,7 +31,7 @@ public:
 		peekmessage(&EasyxMessage);
 
 		/* Convert EasyX Message To VMessage */
-		switch(EasyxMessage.message) {
+		switch (EasyxMessage.message) {
 		case WM_LBUTTONUP: {
 			ResultEvent = new VMouseClickedMessage(EasyxMessage.x, EasyxMessage.y,
 				VMouseClickedFlag::Up, VMouseKeyFlag::Left);
@@ -143,6 +143,7 @@ private:
 		ThemeList.push_back(new VWidgetTheme());
 		ThemeList.push_back(new VBlurLabelTheme());
 		ThemeList.push_back(new VImageLabelTheme());
+		ThemeList.push_back(new VIconButtonTheme());
 	}
 
 protected:

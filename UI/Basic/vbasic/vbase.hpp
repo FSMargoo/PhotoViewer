@@ -42,6 +42,7 @@ VLIB_BEGIN_NAMESPACE
 /* Gdiplus defiiton in VLib */
 namespace VGdiplus {
 #define GDIPVER 0x0110
+#include <Gdipluspixelformats.h>
 #include <gdiplus.h>
 	using namespace Gdiplus;
 }
@@ -58,9 +59,9 @@ public:
 	 * Geomtery Information
 	*/
 
-	_Type left   = 0;
-	_Type top	 = 0;
-	_Type right  = 0;
+	_Type left = 0;
+	_Type top = 0;
+	_Type right = 0;
 	_Type bottom = 0;
 
 public:
@@ -72,9 +73,9 @@ public:
 	}
 
 	void operator=(_VRect Rect) {
-		left   = Rect.left;
-		right  = Rect.right;
-		top    = Rect.top;
+		left = Rect.left;
+		right = Rect.right;
+		top = Rect.top;
 		bottom = Rect.bottom;
 	}
 
@@ -111,12 +112,12 @@ public:
 	 *	@return value : The New Rect Offseted
 	*/
 	_VRect Offset(const _Type LeftOffset,
-				  const _Type TopOffset,
-		          const _Type RightOffset, 
-				  const _Type BottomOffset) {
-		left   += LeftOffset;
-		top    += TopOffset;
-		right  += RightOffset;
+		const _Type TopOffset,
+		const _Type RightOffset,
+		const _Type BottomOffset) {
+		left += LeftOffset;
+		top += TopOffset;
+		right += RightOffset;
 		bottom += BottomOffset;
 
 		return Clone();
@@ -127,13 +128,13 @@ public:
 	 *	@return value : Nothing
 	*/
 	void Move(const _Type Left, const _Type Top) {
-		auto width  = GetWidth();
+		auto width = GetWidth();
 		auto height = GetHeight();
 
-		left   = Left;
-		top    = Top;
-		right  = left + width;
-		bottom = top  + height;
+		left = Left;
+		top = Top;
+		right = left + width;
+		bottom = top + height;
 	}
 
 	/*
@@ -143,7 +144,7 @@ public:
 	*/
 	bool Overlap(_VRect Rect) {
 		return (max(left, Rect.left) < min(right, Rect.right)) &&
-			   (max(top, Rect.top) < min(bottom, Rect.bottom));
+			(max(top, Rect.top) < min(bottom, Rect.bottom));
 	}
 	/*
 	 * Include Functional:
@@ -161,7 +162,7 @@ public:
 	 *	@return value : Converted Value
 	*/
 	VGdiplus::Rect ToGdiplusRect() {
-		return VGdiplus::Rect( static_cast<INT>(left), static_cast<INT>(top) , static_cast<INT>(right - left), static_cast<INT>(bottom - top) );
+		return VGdiplus::Rect(static_cast<INT>(left), static_cast<INT>(top), static_cast<INT>(right - left), static_cast<INT>(bottom - top));
 	}
 	/*
 	 * ToGdiplusRectF Functional:
@@ -177,10 +178,10 @@ public:
 	 *	@description  : Fusion Rectangles With This Rectangle
 	*/
 	void FusionRect(_VRect Rect) {
-		left   = min(Rect.left   , left);
-		right  = max(Rect.right  , right);
-		top    = min(Rect.top    , top);
-		bottom = max(Rect.bottom , bottom);
+		left = min(Rect.left, left);
+		right = max(Rect.right, right);
+		top = min(Rect.top, top);
+		bottom = max(Rect.bottom, bottom);
 	}
 };
 
@@ -261,13 +262,13 @@ public:
 	 *	@description  : Is the Point Inside a Rectangle
 	*/
 	bool InsideRect(_VRect<_Type> Rect) {
-		return Rect.left  <= x && Rect.top    <= y &&
-			   Rect.right >= x && Rect.bottom >= y;
+		return Rect.left <= x && Rect.top <= y &&
+			Rect.right >= x && Rect.bottom >= y;
 	}
 
 	/*
 	 * Offset Functional:
-	 *	@description  : Offset 
+	 *	@description  : Offset
 	*/
 	void Offset(_Type OffsetX, _Type OffsetY) {
 		x += OffsetX;
@@ -280,7 +281,7 @@ public:
  *	@description : The Instantiation Of _VRect
 */
 
-using VRect  = _VRect<int>;
+using VRect = _VRect<int>;
 using VRectF = _VRect<float>;
 
 
@@ -303,10 +304,10 @@ using VPointF = _VPoint<float>;
 #	define VUnlikely(Exp) (Exp)
 #endif
 
-/*
- * EasyXWindowResize Functional:
- *	@description  : Resize EasyX Window
-*/
+ /*
+  * EasyXWindowResize Functional:
+  *	@description  : Resize EasyX Window
+ */
 void EasyXWindowResize(int Width, int Height) {
 	Resize(NULL, Width, Height);
 }

@@ -84,13 +84,13 @@ public:
 		: VPaintbleObject(VPaintbleType::ImagePainter) {
 		NativeImage.reset(Object.NativeImage->Clone(
 			0, 0, Object.NativeImage->GetWidth(), Object.NativeImage->GetHeight(),
-			Object.NativeImage->GetPixelFormat()
+			PixelFormat32bppPARGB
 		));
 	}
 
 	VImage(int Width, int Height)
 		: VPaintbleObject(VPaintbleType::ImagePainter) {
-		NativeImage.reset(new VGdiplus::Bitmap(Width, Height));
+		NativeImage.reset(new VGdiplus::Bitmap(Width, Height, PixelFormat32bppPARGB));
 	}
 
 	VImage(HICON IconHandle)
@@ -108,7 +108,7 @@ public:
 
 	VImage(std::wstring FilePath)
 		: VPaintbleObject(VPaintbleType::ImagePainter) {
-		NativeImage.reset(new VGdiplus::Bitmap(FilePath.c_str()));
+		NativeImage.reset(new VGdiplus::Bitmap(FilePath.c_str(), PixelFormat32bppPARGB));
 	}
 
 	/*
@@ -152,7 +152,7 @@ public:
 
 		RECT                 ImageRect{ 0, 0, static_cast<LONG>(NativeImage->GetWidth()), static_cast<LONG>(NativeImage->GetHeight()) };
 
-		Parameter.radius     = Radius;
+		Parameter.radius = Radius;
 		Parameter.expandEdge = false;
 
 		BlurEffect.SetParameters(&Parameter);

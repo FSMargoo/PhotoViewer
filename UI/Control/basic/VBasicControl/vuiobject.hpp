@@ -625,7 +625,7 @@ public:
 		return ObjectSurface->Rect.left;
 	}
 	int  GetY()      const {
-		return ObjectSurface->Rect.left;
+		return ObjectSurface->Rect.top;
 	}
 	int  GetWidth()  const {
 		return ObjectSurface->Rect.right - ObjectSurface->Rect.left;

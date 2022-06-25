@@ -1,5 +1,5 @@
 ﻿/*
- * VImageLabel.hpp 
+ * VImageLabel.hpp
  *	@description  : A Label Which Show Image
 */
 

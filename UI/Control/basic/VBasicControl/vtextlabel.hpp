@@ -89,6 +89,12 @@ public:
 
 		UpdateObject();
 	}
+
+	void SetRadius(VPoint Radius) {
+		Theme->Radius = Radius;
+
+		UpdateObject();
+	}
 };
 
 VLIB_END_NAMESPACE

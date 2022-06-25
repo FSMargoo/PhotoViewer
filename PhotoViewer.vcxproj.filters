@@ -4,87 +4,106 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PVMainWindow.hpp" />
-    <ClInclude Include="PVControlGroup.h" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vabstractbutton.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vapplication.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vbase.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vbasicanimation.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vblurlabel.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vbrush.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vcanvas.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vcolor.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vfont.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vimage.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vimagelabel.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vmemory.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vmessage.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vpainter.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vpainterdevice.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vpen.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vpushbutton.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Render\vrender\vrenderbasic.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vsignal.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vtextlabel.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vtheme.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vthreadprotectble.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Basic\vbasic\vtimer.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vuiobject.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Control\basic\VBasicControl\vwidget.hpp">
-      <Filter>UIKits</Filter>
-    </ClInclude>
+    <Filter Include="UI">
+      <UniqueIdentifier>{1aabaec3-9a32-419d-b8e5-8c7139f32d53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="UIKits">
-      <UniqueIdentifier>{d5591b24-0d97-4bf1-befa-b7f88fb3b27e}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vabstractbutton.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vapplication.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vbasicanimation.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vblurlabel.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vcontrolgroup.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\viconbutton.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vimagelabel.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vpushbutton.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vtextlabel.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vtheme.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vuiobject.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Control\basic\VBasicControl\vwidget.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vbrush.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vcanvas.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vcolor.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vfont.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vimage.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpainter.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpainterdevice.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vpen.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Render\vrender\vrenderbasic.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vbase.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vmemory.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vmessage.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vsignal.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vthreadprotectble.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Basic\vbasic\vtimer.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PVApplication.hpp" />
+    <ClInclude Include="PVWidget.hpp" />
+    <ClInclude Include="PVSoftware.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\vbase">
+      <Filter>UI</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PhotoViewer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\pv\software.ico" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1179d2ff-673e-40d3-ae3c-ef683e8f4f4b}</ProjectGuid>
-    <RootNamespace>PhotoViewer</RootNamespace>
+    <ProjectGuid>{7110b8df-a91a-453f-85bb-04f7ec6cca1a}</ProjectGuid>
+    <RootNamespace>vbasic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>VBasic</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -104,8 +105,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>Default</LanguageStandard>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,7 +119,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,49 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="PVApplication.hpp" />
-    <ClInclude Include="PVSoftware.hpp" />
-    <ClInclude Include="PVWidget.hpp" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="UI\Basic\vbasic\vbase.hpp" />
-    <ClInclude Include="UI\Basic\vbasic\vmemory.hpp" />
-    <ClInclude Include="UI\Basic\vbasic\vmessage.hpp" />
-    <ClInclude Include="UI\Basic\vbasic\vsignal.hpp" />
-    <ClInclude Include="UI\Basic\vbasic\vthreadprotectble.hpp" />
-    <ClInclude Include="UI\Basic\vbasic\vtimer.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vabstractbutton.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vapplication.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vbasicanimation.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vblurlabel.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vcontrolgroup.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\viconbutton.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vimagelabel.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vpushbutton.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vtextlabel.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vtheme.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vuiobject.hpp" />
-    <ClInclude Include="UI\Control\basic\VBasicControl\vwidget.hpp" />
-    <ClInclude Include="UI\Render\vrender\vbrush.hpp" />
-    <ClInclude Include="UI\Render\vrender\vcanvas.hpp" />
-    <ClInclude Include="UI\Render\vrender\vcolor.hpp" />
-    <ClInclude Include="UI\Render\vrender\vfont.hpp" />
-    <ClInclude Include="UI\Render\vrender\vimage.hpp" />
-    <ClInclude Include="UI\Render\vrender\vpainter.hpp" />
-    <ClInclude Include="UI\Render\vrender\vpainterdevice.hpp" />
-    <ClInclude Include="UI\Render\vrender\vpen.hpp" />
-    <ClInclude Include="UI\Render\vrender\vrenderbasic.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\vbase" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="PhotoViewer.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\pv\software.ico" />
+    <ClInclude Include="vbase.hpp" />
+    <ClInclude Include="vmemory.hpp" />
+    <ClInclude Include="vmessage.hpp" />
+    <ClInclude Include="vsignal.hpp" />
+    <ClInclude Include="vthreadprotectble.hpp" />
+    <ClInclude Include="vtimer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

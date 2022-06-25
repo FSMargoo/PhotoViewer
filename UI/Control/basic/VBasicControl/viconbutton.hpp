@@ -17,7 +17,7 @@ VLIB_BEGIN_NAMESPACE
 */
 class VIconButton : public VAbstractButton {
 private:
-	VPushButtonTheme* Theme;
+	VIconButtonTheme* Theme;
 
 	VColorInterpolator TextColor;
 	VColorInterpolator BackgroundColor;
@@ -32,10 +32,7 @@ public:
 		TextColor(0.1, VInterpolatorType::AccelerateInterpolator),
 		BackgroundColor(0.1, VInterpolatorType::AccelerateInterpolator),
 		LineColor(0.1, VInterpolatorType::AccelerateInterpolator) {
-		Theme = new VPushButtonTheme(*(static_cast<VPushButtonTheme*>(SearchThemeFromParent(VPUSHBUTTON_THEME))));
-
-		Theme->LineColor        = VColor(56, 56, 56, 0);
-		Theme->CurrentLineColor = VColor(56, 56, 56, 0);
+		Theme = new VIconButtonTheme(*(static_cast<VIconButtonTheme*>(SearchThemeFromParent(VICONBUTTON_THEME))));
 
 		if (VUnlikely(Theme == nullptr)) {
 			VAssertBox(L"Error! Can't Get the Native Theme Of VPushButton");

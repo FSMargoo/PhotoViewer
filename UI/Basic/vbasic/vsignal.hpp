@@ -63,7 +63,7 @@ private:
 public:
 	connection(ObjectType* object, object_functional_ptr functional)
 		: connect_basic<Type...>([object, functional](Type... args) { (*object.*functional)(args...); }) {
-		object_ref        = object;
+		object_ref = object;
 		object_functional = functional;
 	}
 

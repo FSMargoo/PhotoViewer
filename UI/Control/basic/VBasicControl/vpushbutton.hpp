@@ -60,24 +60,24 @@ public:
 	}
 
 	void LeftClickedDown() override {
-		BackgroundColor .Start(Theme->CurrentBackgroundColor, Theme->OnClickedBackgroundColor);
-		TextColor       .Start(Theme->CurrentTextColor, Theme->OnClickedTextColor);
-		LineColor       .Start(Theme->CurrentLineColor, Theme->OnClickedLineColor);
+		BackgroundColor.Start(Theme->CurrentBackgroundColor, Theme->OnClickedBackgroundColor);
+		TextColor.Start(Theme->CurrentTextColor, Theme->OnClickedTextColor);
+		LineColor.Start(Theme->CurrentLineColor, Theme->OnClickedLineColor);
 	}
 	void LeftClickedUp() override {
-		BackgroundColor .Start(Theme->CurrentBackgroundColor, Theme->OnHoverBackgroundColor);
-		TextColor       .Start(Theme->CurrentTextColor, Theme->OnHoverTextColor);
-		LineColor       .Start(Theme->CurrentLineColor, Theme->OnHoverLineColor);
+		BackgroundColor.Start(Theme->CurrentBackgroundColor, Theme->OnHoverBackgroundColor);
+		TextColor.Start(Theme->CurrentTextColor, Theme->OnHoverTextColor);
+		LineColor.Start(Theme->CurrentLineColor, Theme->OnHoverLineColor);
 	}
 	void GotMouseFocus() override {
-		BackgroundColor .Start(Theme->CurrentBackgroundColor, Theme->OnHoverBackgroundColor);
-		TextColor       .Start(Theme->CurrentTextColor, Theme->OnHoverTextColor);
-		LineColor       .Start(Theme->CurrentLineColor, Theme->OnHoverLineColor);
+		BackgroundColor.Start(Theme->CurrentBackgroundColor, Theme->OnHoverBackgroundColor);
+		TextColor.Start(Theme->CurrentTextColor, Theme->OnHoverTextColor);
+		LineColor.Start(Theme->CurrentLineColor, Theme->OnHoverLineColor);
 	}
 	void LosedMouseFocus() override {
-		BackgroundColor .Start(Theme->CurrentBackgroundColor, Theme->BackgroundColor);
-		TextColor       .Start(Theme->CurrentTextColor, Theme->TextColor);
-		LineColor       .Start(Theme->CurrentLineColor, Theme->LineColor);
+		BackgroundColor.Start(Theme->CurrentBackgroundColor, Theme->BackgroundColor);
+		TextColor.Start(Theme->CurrentTextColor, Theme->TextColor);
+		LineColor.Start(Theme->CurrentLineColor, Theme->LineColor);
 	}
 
 public:
@@ -91,11 +91,11 @@ public:
 
 	void CheckFrame() override {
 		if (BackgroundColor.IsAnimationEnd() == false ||
-			TextColor.IsAnimationEnd() == false       || 
-			LineColor.IsAnimationEnd() == false       ) {
+			TextColor.IsAnimationEnd() == false ||
+			LineColor.IsAnimationEnd() == false) {
 			Theme->CurrentBackgroundColor = BackgroundColor.GetOneFrame();
-			Theme->CurrentTextColor       = TextColor.GetOneFrame();
-			Theme->CurrentLineColor       = LineColor.GetOneFrame();
+			Theme->CurrentTextColor = TextColor.GetOneFrame();
+			Theme->CurrentLineColor = LineColor.GetOneFrame();
 
 			Update();
 		}

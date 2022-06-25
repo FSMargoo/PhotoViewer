@@ -78,7 +78,7 @@ private:
 	HWND                          WindowHandle;
 
 private:
-	int MinimalWidth  = 0;
+	int MinimalWidth = 0;
 	int MinimalHeight = 0;
 
 public:
@@ -89,7 +89,7 @@ public:
 	void SetMinimalWidth(int Width) {
 		VMainWindowMaxInfoMessage.erase(GetWinID());
 
-		MinimalWidth  = Width;
+		MinimalWidth = Width;
 
 		VMainWindowMaxInfoMessage.insert(std::pair<HWND, VPoint>(GetWinID(), { MinimalWidth, MinimalHeight }));
 	}
@@ -109,12 +109,12 @@ private:
 	VTimer                        FpsTimer;
 
 private:
-	bool                          Win32Resized  = false;
-	int                           ResizedWidth  = 0;
+	bool                          Win32Resized = false;
+	int                           ResizedWidth = 0;
 	int                           ResizedHeight = 0;
 
 	std::wstring                  GlobalFocusID;
-	
+
 protected:
 	/*
 	 * SetGlobalFocusID override Functional
@@ -139,9 +139,9 @@ private:
 		}
 
 		if (Handle == WindowHandle) {
-			Win32Resized  = true;
+			Win32Resized = true;
 
-			ResizedWidth  = Width;
+			ResizedWidth = Width;
 			ResizedHeight = Height;
 		}
 	}
@@ -294,7 +294,7 @@ public:
 
 		Update(Surface()->Rect);
 	}
-	~VMainWindow() {  EndBatchDraw();  }
+	~VMainWindow() { EndBatchDraw(); }
 
 	void CheckFrame() {
 		if (FpsTimer.End() == true) {
